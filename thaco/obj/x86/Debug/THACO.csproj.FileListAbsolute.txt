@@ -1,0 +1,29 @@
+E:\bon\THACO\THACO\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\bon\THACO\THACO\obj\x86\Debug\THACO.Form1.resources
+E:\bon\THACO\THACO\obj\x86\Debug\THACO.Properties.Resources.resources
+E:\bon\THACO\THACO\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\bon\THACO\THACO\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\bon\THACO\THACO\bin\Debug\THACO.exe.config
+E:\bon\THACO\THACO\bin\Debug\THACO.exe
+E:\bon\THACO\THACO\bin\Debug\THACO.pdb
+E:\bon\THACO\THACO\obj\x86\Debug\THACO.Form2.resources
+E:\bon\THACO\THACO\obj\x86\Debug\THACO.exe
+E:\bon\THACO\THACO\obj\x86\Debug\THACO.pdb
+E:\5. WORK\THACO\New folder\THACO\THACO\bin\Debug\THACO.exe.config
+E:\5. WORK\THACO\New folder\THACO\THACO\obj\x86\Debug\THACO.exe
+E:\5. WORK\THACO\New folder\THACO\THACO\obj\x86\Debug\THACO.pdb
+E:\5. WORK\THACO\New folder\THACO\THACO\bin\Debug\THACO.exe
+E:\5. WORK\THACO\New folder\THACO\THACO\bin\Debug\THACO.pdb
+E:\5. WORK\THACO\New folder\THACO\THACO\obj\x86\Debug\THACO.Form1.resources
+E:\5. WORK\THACO\New folder\THACO\THACO\obj\x86\Debug\THACO.Form2.resources
+E:\5. WORK\THACO\New folder\THACO\THACO\obj\x86\Debug\THACO.Properties.Resources.resources
+E:\5. WORK\THACO\New folder\THACO\THACO\obj\x86\Debug\THACO.csproj.GenerateResource.Cache
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\bin\Debug\THACO.exe.config
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\obj\x86\Debug\THACO.exe
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\obj\x86\Debug\THACO.pdb
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\bin\Debug\THACO.exe
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\bin\Debug\THACO.pdb
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\obj\x86\Debug\THACO.Form1.resources
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\obj\x86\Debug\THACO.Form2.resources
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\obj\x86\Debug\THACO.Properties.Resources.resources
+C:\Users\ALIENWARE\Desktop\THACO-master (1)\THACO-master\THACO\obj\x86\Debug\THACO.csproj.GenerateResource.Cache

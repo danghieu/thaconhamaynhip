@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="THACOModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="THACOEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBaoCaoSXes" EntityType="THACOModel.tblBaoCaoSX" />
+    <EntitySet Name="tblChuyens" EntityType="THACOModel.tblChuyen" />
+    <EntitySet Name="tblDonVis" EntityType="THACOModel.tblDonVi" />
+    <EntitySet Name="tblKeHoachSXes" EntityType="THACOModel.tblKeHoachSX" />
+    <EntitySet Name="tblKetQuaSXes" EntityType="THACOModel.tblKetQuaSX" />
+    <EntitySet Name="tblLoaiSPs" EntityType="THACOModel.tblLoaiSP" />
+    <EntitySet Name="tblSanPhams" EntityType="THACOModel.tblSanPham" />
+    <EntitySet Name="tblTaoMas" EntityType="THACOModel.tblTaoMa" />
+    <EntitySet Name="tblThamSoes" EntityType="THACOModel.tblThamSo" />
+    <EntitySet Name="tblUsers" EntityType="THACOModel.tblUser" />
+    <AssociationSet Name="FK_tblBaoCaoSX_tblSanPham" Association="THACOModel.FK_tblBaoCaoSX_tblSanPham">
+      <End Role="tblSanPham" EntitySet="tblSanPhams" />
+      <End Role="tblBaoCaoSX" EntitySet="tblBaoCaoSXes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblChuyen_tblDonVi" Association="THACOModel.FK_tblChuyen_tblDonVi">
+      <End Role="tblDonVi" EntitySet="tblDonVis" />
+      <End Role="tblChuyen" EntitySet="tblChuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblLoaiSP_tblDonVi" Association="THACOModel.FK_tblLoaiSP_tblDonVi">
+      <End Role="tblDonVi" EntitySet="tblDonVis" />
+      <End Role="tblLoaiSP" EntitySet="tblLoaiSPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblKeHoachSX_tblSanPham" Association="THACOModel.FK_tblKeHoachSX_tblSanPham">
+      <End Role="tblSanPham" EntitySet="tblSanPhams" />
+      <End Role="tblKeHoachSX" EntitySet="tblKeHoachSXes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblKetQuaSX_tblSanPham" Association="THACOModel.FK_tblKetQuaSX_tblSanPham">
+      <End Role="tblSanPham" EntitySet="tblSanPhams" />
+      <End Role="tblKetQuaSX" EntitySet="tblKetQuaSXes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSanPham_tblLoaiSP" Association="THACOModel.FK_tblSanPham_tblLoaiSP">
+      <End Role="tblLoaiSP" EntitySet="tblLoaiSPs" />
+      <End Role="tblSanPham" EntitySet="tblSanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTaoMa_tblSanPham" Association="THACOModel.FK_tblTaoMa_tblSanPham">
+      <End Role="tblSanPham" EntitySet="tblSanPhams" />
+      <End Role="tblTaoMa" EntitySet="tblTaoMas" />
+    </AssociationSet>
+    <FunctionImport Name="KetQua_Ngay" ReturnType="Collection(THACOModel.KetQua_Ngay_Result)">
+      <Parameter Name="sNgay" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="tblBaoCaoSX">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SanPhamID" Type="Int32" />
+    <Property Name="Ngay" Type="DateTime" />
+    <Property Name="ThucHien" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="KeHoach" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="TiLe" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblSanPham" Relationship="THACOModel.FK_tblBaoCaoSX_tblSanPham" FromRole="tblBaoCaoSX" ToRole="tblSanPham" />
+  </EntityType>
+  <EntityType Name="tblChuyen">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaChuyen" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TenChuyen" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="DonViID" Type="Int32" />
+    <Property Name="TenTiengAnh" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ThuTu" Type="Int32" />
+    <NavigationProperty Name="tblDonVi" Relationship="THACOModel.FK_tblChuyen_tblDonVi" FromRole="tblChuyen" ToRole="tblDonVi" />
+  </EntityType>
+  <EntityType Name="tblDonVi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDV" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="DonVi" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblChuyens" Relationship="THACOModel.FK_tblChuyen_tblDonVi" FromRole="tblDonVi" ToRole="tblChuyen" />
+    <NavigationProperty Name="tblLoaiSPs" Relationship="THACOModel.FK_tblLoaiSP_tblDonVi" FromRole="tblDonVi" ToRole="tblLoaiSP" />
+  </EntityType>
+  <EntityType Name="tblKeHoachSX">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SanPhamID" Type="Int32" />
+    <Property Name="Ngay" Type="DateTime" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="LastUpdate" Type="DateTime" />
+    <Property Name="LastUpdateBy" Type="Int32" />
+    <NavigationProperty Name="tblSanPham" Relationship="THACOModel.FK_tblKeHoachSX_tblSanPham" FromRole="tblKeHoachSX" ToRole="tblSanPham" />
+  </EntityType>
+  <EntityType Name="tblKetQuaSX">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SanPhamID" Type="Int32" />
+    <Property Name="NgaySX" Type="DateTime" />
+    <Property Name="MaBarcode" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+    <Property Name="ThoiGian" Type="DateTime" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="tblSanPham" Relationship="THACOModel.FK_tblKetQuaSX_tblSanPham" FromRole="tblKetQuaSX" ToRole="tblSanPham" />
+  </EntityType>
+  <EntityType Name="tblLoaiSP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaLoaiSP" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TenLoaiSP" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="DonViID" Type="Int32" />
+    <NavigationProperty Name="tblDonVi" Relationship="THACOModel.FK_tblLoaiSP_tblDonVi" FromRole="tblLoaiSP" ToRole="tblDonVi" />
+    <NavigationProperty Name="tblSanPhams" Relationship="THACOModel.FK_tblSanPham_tblLoaiSP" FromRole="tblLoaiSP" ToRole="tblSanPham" />
+  </EntityType>
+  <EntityType Name="tblSanPham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSanPham" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TenSanPham" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="LoaiSPID" Type="Int32" />
+    <Property Name="KyHieuNhan" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="QuyCach" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblBaoCaoSXes" Relationship="THACOModel.FK_tblBaoCaoSX_tblSanPham" FromRole="tblSanPham" ToRole="tblBaoCaoSX" />
+    <NavigationProperty Name="tblKeHoachSXes" Relationship="THACOModel.FK_tblKeHoachSX_tblSanPham" FromRole="tblSanPham" ToRole="tblKeHoachSX" />
+    <NavigationProperty Name="tblKetQuaSXes" Relationship="THACOModel.FK_tblKetQuaSX_tblSanPham" FromRole="tblSanPham" ToRole="tblKetQuaSX" />
+    <NavigationProperty Name="tblLoaiSP" Relationship="THACOModel.FK_tblSanPham_tblLoaiSP" FromRole="tblSanPham" ToRole="tblLoaiSP" />
+    <NavigationProperty Name="tblTaoMas" Relationship="THACOModel.FK_tblTaoMa_tblSanPham" FromRole="tblSanPham" ToRole="tblTaoMa" />
+  </EntityType>
+  <EntityType Name="tblTaoMa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SanPhamID" Type="Int32" />
+    <Property Name="KyHieuNhan" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NamSX" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ThangSX" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Ngay" Type="DateTime" />
+    <Property Name="SoLuong" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="MaBarcode" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblSanPham" Relationship="THACOModel.FK_tblTaoMa_tblSanPham" FromRole="tblTaoMa" ToRole="tblSanPham" />
+  </EntityType>
+  <EntityType Name="tblThamSo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kyhieu" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="GiaTri" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DislayName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_tblBaoCaoSX_tblSanPham">
+    <End Role="tblSanPham" Type="THACOModel.tblSanPham" Multiplicity="0..1" />
+    <End Role="tblBaoCaoSX" Type="THACOModel.tblBaoCaoSX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblBaoCaoSX">
+        <PropertyRef Name="SanPhamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblChuyen_tblDonVi">
+    <End Role="tblDonVi" Type="THACOModel.tblDonVi" Multiplicity="0..1" />
+    <End Role="tblChuyen" Type="THACOModel.tblChuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDonVi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblChuyen">
+        <PropertyRef Name="DonViID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblLoaiSP_tblDonVi">
+    <End Role="tblDonVi" Type="THACOModel.tblDonVi" Multiplicity="0..1" />
+    <End Role="tblLoaiSP" Type="THACOModel.tblLoaiSP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDonVi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblLoaiSP">
+        <PropertyRef Name="DonViID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblKeHoachSX_tblSanPham">
+    <End Role="tblSanPham" Type="THACOModel.tblSanPham" Multiplicity="0..1" />
+    <End Role="tblKeHoachSX" Type="THACOModel.tblKeHoachSX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblKeHoachSX">
+        <PropertyRef Name="SanPhamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblKetQuaSX_tblSanPham">
+    <End Role="tblSanPham" Type="THACOModel.tblSanPham" Multiplicity="0..1" />
+    <End Role="tblKetQuaSX" Type="THACOModel.tblKetQuaSX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblKetQuaSX">
+        <PropertyRef Name="SanPhamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSanPham_tblLoaiSP">
+    <End Role="tblLoaiSP" Type="THACOModel.tblLoaiSP" Multiplicity="0..1" />
+    <End Role="tblSanPham" Type="THACOModel.tblSanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblLoaiSP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblSanPham">
+        <PropertyRef Name="LoaiSPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTaoMa_tblSanPham">
+    <End Role="tblSanPham" Type="THACOModel.tblSanPham" Multiplicity="0..1" />
+    <End Role="tblTaoMa" Type="THACOModel.tblTaoMa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblTaoMa">
+        <PropertyRef Name="SanPhamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="KetQua_Ngay_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="SanPhamID" Nullable="false" />
+    <Property Type="String" Name="MaSanPham" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TenSanPham" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="LoaiSPID" Nullable="true" />
+    <Property Type="String" Name="MaLoaiSP" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TenLoaiSP" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="KeHoachNgay" Nullable="true" />
+    <Property Type="Int32" Name="ThucHienNgay" Nullable="true" />
+    <Property Type="Int32" Name="ChenhLech" Nullable="true" />
+    <Property Type="Int32" Name="KeHoachThang" Nullable="true" />
+    <Property Type="Int32" Name="KetQuaThang" Nullable="true" />
+  </ComplexType>
+</Schema>
