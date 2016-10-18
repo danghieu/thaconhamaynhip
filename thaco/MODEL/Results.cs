@@ -117,7 +117,7 @@ namespace THACO.MODE
             var listOrigin = list;
             KQNOrigin = listOrigin;
             if (list.Count < socbbsp)
-               list.Insert(0, new SPKetQuaNgay() { TenSanPham = "                    " });
+               list.Insert(0, new SPKetQuaNgay() { TenSanPham = "                    ", KeHoachNgay = 0, ThucHienNgay = 0, KeHoachThang = 0, KetQuaThang = 0  });
             if (list == null) throw new ArgumentNullException(); if (list == null) throw new ArgumentNullException();
             KQN = list;      
             return list;

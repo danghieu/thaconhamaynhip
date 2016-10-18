@@ -228,7 +228,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(104, 17);
             this.label12.TabIndex = 111;
-            this.label12.Text = "TRANG THAI: ";
+            this.label12.Text = "TRẠNG THÁI: ";
             // 
             // TB_TIME
             // 
@@ -951,7 +951,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 455);
             this.Controls.Add(this.tabShowData);
-            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THACO";
