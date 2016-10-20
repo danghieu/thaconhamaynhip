@@ -67,8 +67,6 @@ C:\Users\ALIENWARE\Dropbox\3. WORK\3. PROJECT NHIP\3. HMI\GD NHIP 15 10 16\THACO
 C:\Users\ALIENWARE\Dropbox\3. WORK\3. PROJECT NHIP\3. HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.exe
 C:\Users\ALIENWARE\Dropbox\3. WORK\3. PROJECT NHIP\3. HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.pdb
 D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\bin\Release\THACO.exe.config
-D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.exe
-D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.pdb
 D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\bin\Release\THACO.exe
 D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\bin\Release\THACO.pdb
 D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\ResolveAssemblyReference.cache
@@ -77,3 +75,46 @@ D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.Fo
 D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.Properties.Resources.resources
 D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\GenerateResource.read.1.tlog
 D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\GenerateResource.write.1.tlog
+D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.exe
+D:\HMI\GD NHIP 15 10 16\THACO-master\THACO-master\thaco\obj\x86\Release\THACO.pdb
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\bin\Release\THACO.exe.config
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\obj\x86\Release\THACO.exe
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\obj\x86\Release\THACO.pdb
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\bin\Release\THACO.exe
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\bin\Release\THACO.pdb
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\obj\x86\Release\THACO.Form1.resources
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\obj\x86\Release\THACO.Form2.resources
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\obj\x86\Release\THACO.Properties.Resources.resources
+C:\Users\KUDO\Desktop\HMI\THACO-master\thaco\obj\x86\Release\THACO.csproj.GenerateResource.Cache
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\bin\Release\THACO.exe.config
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\obj\x86\Release\THACO.exe
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\obj\x86\Release\THACO.pdb
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\bin\Release\THACO.exe
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\bin\Release\THACO.pdb
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\obj\x86\Release\THACO.Form1.resources
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\obj\x86\Release\THACO.Form2.resources
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\obj\x86\Release\THACO.Properties.Resources.resources
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\obj\x86\Release\THACO.csproj.GenerateResource.Cache
+C:\Users\KUDO\Desktop\HMI\THACO-master app1\thaco\obj\x86\Release\THACO.csprojResolveAssemblyReference.cache
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\ResolveAssemblyReference.cache
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\THACO.Form1.resources
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\THACO.Form2.resources
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\THACO.Properties.Resources.resources
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\GenerateResource.read.1.tlog
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\GenerateResource.write.1.tlog
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\bin\Release\THACO.exe.config
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\bin\Release\THACO.exe
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\bin\Release\THACO.pdb
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\THACO.exe
+D:\HMI\Hieu\Nhon\THACO-master app1 10-20-2016\thaco\obj\x86\Release\THACO.pdb
+D:\HMI\Hieu\thaconhamaynhip\thaco\bin\Release\THACO.exe.config
+D:\HMI\Hieu\thaconhamaynhip\thaco\bin\Release\THACO.exe
+D:\HMI\Hieu\thaconhamaynhip\thaco\bin\Release\THACO.pdb
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\ResolveAssemblyReference.cache
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\THACO.Form1.resources
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\THACO.Form2.resources
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\THACO.Properties.Resources.resources
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\GenerateResource.read.1.tlog
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\GenerateResource.write.1.tlog
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\THACO.exe
+D:\HMI\Hieu\thaconhamaynhip\thaco\obj\x86\Release\THACO.pdb

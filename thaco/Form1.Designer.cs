@@ -32,9 +32,10 @@
             this.COM = new System.IO.Ports.SerialPort(this.components);
             this.TIMER1 = new System.Windows.Forms.Timer(this.components);
             this.TIMER2 = new System.Windows.Forms.Timer(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabShowData = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.LB_DBStatus = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.TB_TIME = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.BT_CONNECT = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TB_NSX = new System.Windows.Forms.TextBox();
             this.TB_LKT = new System.Windows.Forms.TextBox();
             this.TB_NSX2 = new System.Windows.Forms.TextBox();
             this.TB_TKHT = new System.Windows.Forms.TextBox();
@@ -91,40 +91,58 @@
             this.CB_SP3 = new System.Windows.Forms.ComboBox();
             this.CB_SP2 = new System.Windows.Forms.ComboBox();
             this.CB_SP1 = new System.Windows.Forms.ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtConnectionString = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtDatabaseName = new System.Windows.Forms.TextBox();
+            this.txtServerName = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblDatabaseName = new System.Windows.Forms.Label();
+            this.lblConnectionString = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblServerName = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.TIMER3 = new System.Windows.Forms.Timer(this.components);
             this.TIMER4 = new System.Windows.Forms.Timer(this.components);
             this.TIMER5 = new System.Windows.Forms.Timer(this.components);
             this.TIMER6 = new System.Windows.Forms.Timer(this.components);
             this.TIMER7 = new System.Windows.Forms.Timer(this.components);
-            this.tabControl1.SuspendLayout();
+            this.tabShowData.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TIMER1
             // 
-            this.TIMER1.Interval = 15000;
+            this.TIMER1.Interval = 5000;
             this.TIMER1.Tick += new System.EventHandler(this.TIMER1_Tick);
             // 
             // TIMER2
             // 
-            this.TIMER2.Interval = 10000;
+            this.TIMER2.Interval = 5000;
             this.TIMER2.Tick += new System.EventHandler(this.TIMER2_Tick);
             // 
-            // tabControl1
+            // tabShowData
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(596, 425);
-            this.tabControl1.TabIndex = 0;
+            this.tabShowData.Controls.Add(this.tabPage1);
+            this.tabShowData.Controls.Add(this.tabPage2);
+            this.tabShowData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabShowData.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabShowData.Location = new System.Drawing.Point(0, 0);
+            this.tabShowData.Name = "tabShowData";
+            this.tabShowData.SelectedIndex = 0;
+            this.tabShowData.Size = new System.Drawing.Size(612, 455);
+            this.tabShowData.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.LB_DBStatus);
+            this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.TB_TIME);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.BT_CONNECT);
@@ -139,7 +157,6 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.TB_NSX);
             this.tabPage1.Controls.Add(this.TB_LKT);
             this.tabPage1.Controls.Add(this.TB_NSX2);
             this.tabPage1.Controls.Add(this.TB_TKHT);
@@ -186,21 +203,32 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(588, 397);
+            this.tabPage1.Size = new System.Drawing.Size(604, 427);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "CONTROL TAB";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // LB_DBStatus
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(369, 16);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 19);
-            this.checkBox1.TabIndex = 111;
-            this.checkBox1.Text = "NHẬP TAY";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.LB_DBStatus.AutoSize = true;
+            this.LB_DBStatus.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_DBStatus.ForeColor = System.Drawing.Color.Maroon;
+            this.LB_DBStatus.Location = new System.Drawing.Point(118, 389);
+            this.LB_DBStatus.Name = "LB_DBStatus";
+            this.LB_DBStatus.Size = new System.Drawing.Size(53, 17);
+            this.LB_DBStatus.TabIndex = 112;
+            this.LB_DBStatus.Text = "FAIL!!!";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Maroon;
+            this.label12.Location = new System.Drawing.Point(10, 389);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 17);
+            this.label12.TabIndex = 111;
+            this.label12.Text = "TRANG THAI: ";
             // 
             // TB_TIME
             // 
@@ -355,16 +383,6 @@
             this.label1.Size = new System.Drawing.Size(317, 19);
             this.label1.TabIndex = 97;
             this.label1.Text = "BẢNG THEO DÕI KẾT QUẢ NGÀY SẢN XUẤT";
-            // 
-            // TB_NSX
-            // 
-            this.TB_NSX.ForeColor = System.Drawing.Color.Navy;
-            this.TB_NSX.Location = new System.Drawing.Point(475, 12);
-            this.TB_NSX.Name = "TB_NSX";
-            this.TB_NSX.ReadOnly = true;
-            this.TB_NSX.Size = new System.Drawing.Size(100, 23);
-            this.TB_NSX.TabIndex = 96;
-            this.TB_NSX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TB_LKT
             // 
@@ -685,7 +703,6 @@
             this.CB_SP7.Size = new System.Drawing.Size(121, 23);
             this.CB_SP7.TabIndex = 61;
             this.CB_SP7.Tag = 6;
-            this.CB_SP7.SelectedIndexChanged += new System.EventHandler(this.comboBoxSP_SelectedIndexChanged);
             // 
             // CB_SP6
             // 
@@ -696,7 +713,6 @@
             this.CB_SP6.Size = new System.Drawing.Size(121, 23);
             this.CB_SP6.TabIndex = 60;
             this.CB_SP6.Tag = 5;
-            this.CB_SP6.SelectedIndexChanged += new System.EventHandler(this.comboBoxSP_SelectedIndexChanged);
             // 
             // CB_SP5
             // 
@@ -707,7 +723,6 @@
             this.CB_SP5.Size = new System.Drawing.Size(121, 23);
             this.CB_SP5.TabIndex = 59;
             this.CB_SP5.Tag = 4;
-            this.CB_SP5.SelectedIndexChanged += new System.EventHandler(this.comboBoxSP_SelectedIndexChanged);
             // 
             // CB_SP4
             // 
@@ -718,7 +733,6 @@
             this.CB_SP4.Size = new System.Drawing.Size(121, 23);
             this.CB_SP4.TabIndex = 58;
             this.CB_SP4.Tag = 3;
-            this.CB_SP4.SelectedIndexChanged += new System.EventHandler(this.comboBoxSP_SelectedIndexChanged);
             // 
             // CB_SP3
             // 
@@ -729,7 +743,6 @@
             this.CB_SP3.Size = new System.Drawing.Size(121, 23);
             this.CB_SP3.TabIndex = 57;
             this.CB_SP3.Tag = 2;
-            this.CB_SP3.SelectedIndexChanged += new System.EventHandler(this.comboBoxSP_SelectedIndexChanged);
             // 
             // CB_SP2
             // 
@@ -740,7 +753,6 @@
             this.CB_SP2.Size = new System.Drawing.Size(121, 23);
             this.CB_SP2.TabIndex = 56;
             this.CB_SP2.Tag = 1;
-            this.CB_SP2.SelectedIndexChanged += new System.EventHandler(this.comboBoxSP_SelectedIndexChanged);
             // 
             // CB_SP1
             // 
@@ -751,11 +763,166 @@
             this.CB_SP1.Size = new System.Drawing.Size(121, 23);
             this.CB_SP1.TabIndex = 55;
             this.CB_SP1.Tag = 0;
-            this.CB_SP1.SelectedIndexChanged += new System.EventHandler(this.comboBoxSP_SelectedIndexChanged);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.txtConnectionString);
+            this.tabPage2.Controls.Add(this.txtPassword);
+            this.tabPage2.Controls.Add(this.txtUserName);
+            this.tabPage2.Controls.Add(this.txtDatabaseName);
+            this.tabPage2.Controls.Add(this.txtServerName);
+            this.tabPage2.Controls.Add(this.lblPassword);
+            this.tabPage2.Controls.Add(this.lblDatabaseName);
+            this.tabPage2.Controls.Add(this.lblConnectionString);
+            this.tabPage2.Controls.Add(this.lblUserName);
+            this.tabPage2.Controls.Add(this.lblServerName);
+            this.tabPage2.Controls.Add(this.radioButton2);
+            this.tabPage2.Controls.Add(this.radioButton1);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.btnSave);
+            this.tabPage2.ForeColor = System.Drawing.Color.Navy;
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(604, 427);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "SETTINGS";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtConnectionString
+            // 
+            this.txtConnectionString.Location = new System.Drawing.Point(188, 131);
+            this.txtConnectionString.Name = "txtConnectionString";
+            this.txtConnectionString.Size = new System.Drawing.Size(354, 23);
+            this.txtConnectionString.TabIndex = 128;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(188, 246);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(354, 23);
+            this.txtPassword.TabIndex = 128;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(188, 208);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(354, 23);
+            this.txtUserName.TabIndex = 128;
+            // 
+            // txtDatabaseName
+            // 
+            this.txtDatabaseName.Location = new System.Drawing.Point(188, 165);
+            this.txtDatabaseName.Name = "txtDatabaseName";
+            this.txtDatabaseName.Size = new System.Drawing.Size(354, 23);
+            this.txtDatabaseName.TabIndex = 128;
+            // 
+            // txtServerName
+            // 
+            this.txtServerName.Location = new System.Drawing.Point(188, 131);
+            this.txtServerName.Name = "txtServerName";
+            this.txtServerName.Size = new System.Drawing.Size(354, 23);
+            this.txtServerName.TabIndex = 128;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblPassword.Location = new System.Drawing.Point(40, 254);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(68, 15);
+            this.lblPassword.TabIndex = 123;
+            this.lblPassword.Text = "Mật khẩu:";
+            // 
+            // lblDatabaseName
+            // 
+            this.lblDatabaseName.AutoSize = true;
+            this.lblDatabaseName.ForeColor = System.Drawing.Color.Black;
+            this.lblDatabaseName.Location = new System.Drawing.Point(40, 173);
+            this.lblDatabaseName.Name = "lblDatabaseName";
+            this.lblDatabaseName.Size = new System.Drawing.Size(115, 15);
+            this.lblDatabaseName.TabIndex = 122;
+            this.lblDatabaseName.Text = "Tên cơ sở dữ liệu:";
+            // 
+            // lblConnectionString
+            // 
+            this.lblConnectionString.AutoSize = true;
+            this.lblConnectionString.ForeColor = System.Drawing.Color.Black;
+            this.lblConnectionString.Location = new System.Drawing.Point(40, 139);
+            this.lblConnectionString.Name = "lblConnectionString";
+            this.lblConnectionString.Size = new System.Drawing.Size(90, 15);
+            this.lblConnectionString.TabIndex = 124;
+            this.lblConnectionString.Text = "Chuỗi kết nối:";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.ForeColor = System.Drawing.Color.Black;
+            this.lblUserName.Location = new System.Drawing.Point(40, 216);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(100, 15);
+            this.lblUserName.TabIndex = 126;
+            this.lblUserName.Text = "Tên đăng nhập:";
+            // 
+            // lblServerName
+            // 
+            this.lblServerName.AutoSize = true;
+            this.lblServerName.ForeColor = System.Drawing.Color.Black;
+            this.lblServerName.Location = new System.Drawing.Point(40, 139);
+            this.lblServerName.Name = "lblServerName";
+            this.lblServerName.Size = new System.Drawing.Size(76, 15);
+            this.lblServerName.TabIndex = 125;
+            this.lblServerName.Text = "Tên Server:";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(365, 79);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(127, 19);
+            this.radioButton2.TabIndex = 120;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Tạo chuỗi kết nối";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(79, 79);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(148, 19);
+            this.radioButton1.TabIndex = 121;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Chuỗi kết nối đầy đủ";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Maroon;
+            this.label11.Location = new System.Drawing.Point(-4, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(596, 32);
+            this.label11.TabIndex = 119;
+            this.label11.Text = "KẾT NỐI CƠ SỞ DỮ LIỆU";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(262, 316);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 113;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // TIMER3
             // 
-            this.TIMER3.Interval = 60000;
+            this.TIMER3.Interval = 5000;
             this.TIMER3.Tick += new System.EventHandler(this.TIMER3_Tick);
             // 
             // TIMER4
@@ -782,16 +949,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 425);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(612, 455);
+            this.Controls.Add(this.tabShowData);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THACO";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.tabShowData.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -801,7 +970,7 @@
         private System.IO.Ports.SerialPort COM;
         private System.Windows.Forms.Timer TIMER1;
         private System.Windows.Forms.Timer TIMER2;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabShowData;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button BT_CONNECT;
@@ -816,7 +985,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TB_NSX;
         private System.Windows.Forms.TextBox TB_LKT;
         private System.Windows.Forms.TextBox TB_NSX2;
         private System.Windows.Forms.TextBox TB_TKHT;
@@ -859,12 +1027,28 @@
         private System.Windows.Forms.ComboBox CB_SP2;
         private System.Windows.Forms.ComboBox CB_SP1;
         private System.Windows.Forms.TextBox TB_TIME;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Timer TIMER3;
         private System.Windows.Forms.Timer TIMER4;
         private System.Windows.Forms.Timer TIMER5;
         private System.Windows.Forms.Timer TIMER6;
         private System.Windows.Forms.Timer TIMER7;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblDatabaseName;
+        private System.Windows.Forms.Label lblConnectionString;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblServerName;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtDatabaseName;
+        private System.Windows.Forms.TextBox txtServerName;
+        private System.Windows.Forms.TextBox txtConnectionString;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label LB_DBStatus;
     }
 }
 

@@ -43,8 +43,8 @@ namespace THACO.DAL
             {
                 a = int.Parse(s);
             }
-            catch { 
-            
+            catch {
+                a = 0;
             }
             return a;
 
