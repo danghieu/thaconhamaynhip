@@ -70,7 +70,7 @@ namespace THACO
                 COM.PortName = LISTCOM.Text;
                 try
                 {
-                   COM.Open();
+                  // COM.Open();
                 }
                 catch
                 {
@@ -279,6 +279,7 @@ namespace THACO
                         NSX = today;
                         results = new Results(NSX);
                         results.updatevitri();
+                        updateData();
                         DatNgay();
                     }
 
@@ -292,6 +293,7 @@ namespace THACO
                         }
                         updateData();
                         is_push = true;
+                       
                     }
                     setStatus(true, "OK");
                     

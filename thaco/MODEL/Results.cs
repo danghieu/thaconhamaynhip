@@ -127,7 +127,7 @@ namespace THACO.MODE
         {
             Service service = new Service();
             List<SPKetQuaNgay> list = service.LayKetQuaNgay(NSX);
-            if (list == null) throw new ArgumentNullException();
+            //if (list == null) throw new ArgumentNullException();
             return list;
         }
 
@@ -137,17 +137,17 @@ namespace THACO.MODE
                 return true;
             int count = 0;
             if (SPKQN.Count < socbbsp) count = 1;
-           
 
-            for (int i = 0; i < KQNOrigin.Count - 1; i++) 
+
+            for (int i = 0; i < SPKQN.Count - 1; i++) 
             {
-                //if (SPKQN.ElementAt(i).T != KQNOrigin.ElementAt(i + 1).ThucHienNgay)
-                //    return true;
-
-                if (!SPKQN.ElementAt(i).ThucHienNgay.Equals(KQNOrigin.ElementAt(i).ThucHienNgay))
+                if (SPKQN.ElementAt(i).TenSanPham != KQNOrigin.ElementAt(i + count).TenSanPham)
                     return true;
 
-                if (!SPKQN.ElementAt(i).KeHoachNgay.Equals(KQNOrigin.ElementAt(i).KeHoachNgay))
+                if (!SPKQN.ElementAt(i).ThucHienNgay.Equals(KQNOrigin.ElementAt(i + count).ThucHienNgay))
+                    return true;
+
+                if (!SPKQN.ElementAt(i).KeHoachNgay.Equals(KQNOrigin.ElementAt(i + count).KeHoachNgay))
                     return true;
 
                 if (!SPKQN.ElementAt(i).KeHoachThang.Equals(KQNOrigin.ElementAt(i+count).KeHoachThang))
